@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="main.css">
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleAnimator.js" charset="utf-8"></script>
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleButton.js" charset="utf-8"></script>
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleInfoButton.js" charset="utf-8"></script>
+    <script type="text/javascript" src="Parts/parts.js" charset="utf-8"></script>    
+    <script type="text/javascript" src="main.js" charset="utf-8"></script>
+    <script type="text/javascript" src="localizedStrings.js" charset="utf-8"></script>
+    <script type="text/javascript" src="attributes.js" charset="utf-8"></script>
+    <script type="text/javascript" src="PodcastSupport.js" charset="utf-8"></script>
+</head>
+<body onload="load();" id="body" apple-locked="true" apple-part="com.apple.Dashcode.part.StackLayout">
+    <div id="front" apple-locked="true" onmousemove="frontMove();" onmouseout="frontOutDelay();">
+        <img id="frontImg" src="Parts/Images/front.png" alt="" apple-locked="true" apple-part="com.apple.Dashcode.part.frontimage" apple-style="image-theme: 0; image-shape: 3; image-opacity: 1.00; image-top-color: 0.289799988,0.0428000018,0.0428000018,1; image-bottom-color: 0.460200012,0.0627999976,0.0627999976,1; image-radius: 4,4,4,4; image-border: 0; image-border-color: 0.44600001,0.0649000034,0.064199999,1; image-border-width: 2; shine-on: 1; shine-strength: 0.15; shine-alpha-level: 0.00; shine-height: 0.73; glass-arc-height: 0.11; shine-include-bottom: 0; shadow-include-shadow: 1; shadow-blur: 9.00; shadow-offset: -1.00,-6.00; shadow-color: 0,0,0,0.3333;">
+        <div id="arrows">
+            <img src="Images/left_arrow.png" id="previous" apple-default-image-visibility="hidden" onclick="changeEpisode('previous');" apple-locked="false">
+            <img src="Images/right_arrow.png" id="next" apple-default-image-visibility="hidden" onclick="changeEpisode('next');" apple-locked="false">
+        </div>
+        <div apple-part="com.apple.Dashcode.part.roundedrectangleshape" class="apple-no-children" apple-style="image-theme: 1; image-shape: 3; image-button-type: 3; image-opacity: 0.20; image-top-color: 0.8508,0.8508,0.8508; image-bottom-color: 0.5000,0.5000,0.5000; image-radius: 19,19,19,19; image-border: 0; image-border-color: 0.4957,0.0673,0.0673; image-border-width: 2; shine-on: 0; shadow-include-shadow: 0; shadow-blur: 3.00;" id="display" apple-group="roundedRectangleShape" apple-locked="false"></div>
+        <div class="apple-no-children" id="info" apple-part="com.apple.Dashcode.part.infobutton" apple-default-image-visibility="hidden" apple-locked="false"></div>
+        <img src="Images/play.png" id="playButton" apple-default-image-visibility="hidden" apple-locked="false">
+        <div apple-part="com.apple.Dashcode.part.text" class="apple-text" apple-default-image-visibility="hidden" id="episodeName" apple-group="text14" apple-text-overflow="ellipsis" apple-locked="false">Episode Name</div>
+        <div apple-part="com.apple.Dashcode.part.text" class="apple-text" apple-default-image-visibility="hidden" id="episodeDate" apple-group="text17" apple-text-overflow="ellipsis" apple-locked="false">Episode Date</div>
+        <div id="episodeTrack"></div>
+    </div>
+    <div id="back" apple-locked="true">
+        <img id="backImg" src="Parts/Images/back.png" alt="" apple-locked="false" apple-part="com.apple.Dashcode.part.backimage" apple-style=" image-radius: 4,4,4,4; image-border: 1; image-border-color: 0.1500,0.1500,0.1500; image-border-width: 2; shadow-include-shadow: 1; shadow-blur: 9.00; shadow-offset: -1.00,-6.00; shadow-color: 0.0000,0.0000,0.0000,0.3333;">
+        <img id="backDevelopedWith" src="Images/DevelopedWith.png" alt="Created with Dashcode">
+        <div id="done" class="apple-no-children" apple-part="com.apple.Dashcode.part.glassbutton" apple-style="image-theme: 0; image-shape: 3; image-opacity: 1.000000; image-top-color: 0.6700,0.6700,0.6700; image-bottom-color: 0.6700,0.6700,0.6700; image-border-color: 0.6700,0.6700,0.6700;"></div>
+        <div apple-part="com.apple.Dashcode.part.glassbutton" class="apple-no-children" id="subscribeButton" apple-group="glassbutton" apple-style="image-theme: 0; image-shape: 3; image-opacity: 1.000000; image-top-color: 0.6700,0.6700,0.6700; image-bottom-color: 0.6700,0.6700,0.6700; image-border-color: 0.6700,0.6700,0.6700;"></div>
+        <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis" id="episodeInformation"></div>
+    </div>
+</body>
+</html>

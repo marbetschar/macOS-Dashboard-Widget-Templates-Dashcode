@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="main.css" />
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleAnimator.js" charset="utf-8"></script>
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleButton.js" charset="utf-8"></script>
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleInfoButton.js" charset="utf-8"></script>
+    <script type="text/javascript" src="Parts/parts.js" charset="utf-8"></script>    
+    <script type="text/javascript" src="localizedStrings.js" charset="utf-8"></script>
+    <script type="text/javascript" src="attributes.js" charset="utf-8"></script>
+    <script type="text/javascript" src="main.js" charset="utf-8"></script>
+</head>
+<body onload="load();" apple-part="com.apple.Dashcode.part.StackLayout">
+    <div id="front">
+        <img id="frontImg" src="Parts/Images/front.png" alt="" apple-locked="true" apple-part="com.apple.Dashcode.part.frontimage" apple-style="image-theme: 1; image-shape: 3; image-opacity: 1.00; image-top-color: 1.0000,1.0000,1.0000; image-bottom-color: 0.9567,0.9567,0.9567; image-radius: 10,10,10,10; image-border: 1; image-border-color: 0.6154,0.6154,0.6154; image-border-width: 1; shine-on: 0; shine-strength: 0.71; shine-alpha-level: 0.50; shine-height: 0.50; shadow-include-shadow: 1; shadow-blur: 9.00; shadow-offset: -1.00,-6.00; shadow-color: 0.0000,0.0000,0.0000,0.3333;">
+        <div apple-part="com.apple.Dashcode.part.bottomrectangleshape" class="apple-no-children" apple-style="image-theme: 1; image-shape: 10; image-button-type: 3; image-opacity: 1.00; image-top-color: 0.6606,0.7046,0.7879; image-bottom-color: 0.6129,0.6737,0.7619; image-radius: -1,-1,10,10; image-border: 1; image-border-color: 0.6154,0.6154,0.6154; image-border-width: 1; shine-on: 0; shadow-include-shadow: 0; shadow-blur: 3.00;" id="bottomRectangleShape" apple-group="bottomRectangleShape"></div>
+        <div class="apple-no-children" id="info" apple-part="com.apple.Dashcode.part.infobutton" apple-default-image-visibility="hidden"></div>
+        <img src="Images/backButton.png" id="backButton" onclick="showPrevEntry(event);" apple-default-image-visibility="hidden">
+        <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" id="dateText" apple-group="text">Daily Feed</div>
+        <img src="Images/forwardButton.png" id="forwardButton" onclick="showNextEntry(event);" apple-default-image-visibility="hidden">
+        <div id="content" apple-part="com.apple.Dashcode.part.rssfeed" apple-default-image-visibility="hidden">
+            <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-group="text" id="entryTitle" apple-text-overflow="ellipsis">Article title shows here</div>
+            <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-group="text" id="entryDescription">Article content shows here.</div>
+        </div>
+    </div>
+    <div id="back">
+        <img id="backImg" src="Parts/Images/back.png" alt="" apple-locked="true" apple-part="com.apple.Dashcode.part.backimage" apple-style=" image-radius: 10,10,10,10; image-border: 1; image-border-color: 0.1500,0.1500,0.1500; image-border-width: 3; shadow-include-shadow: 1; shadow-blur: 9.00; shadow-offset: -1.00,-6.00; shadow-color: 0.0000,0.0000,0.0000,0.3333;">
+        <img id="backDevelopedWith" src="Images/DevelopedWith.png" alt="Created with Dashcode">
+        <div id="done" class="apple-no-children" apple-part="com.apple.Dashcode.part.glassbutton"></div>
+    </div>
+</body>
+</html>

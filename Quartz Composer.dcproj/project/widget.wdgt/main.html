@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="main.css" />
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleAnimator.js" charset="utf-8"></script>
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleButton.js" charset="utf-8"></script>
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleInfoButton.js" charset="utf-8"></script>
+    <script type="text/javascript" src="Parts/parts.js" charset="utf-8"></script>    
+    <script type="text/javascript" src="localizedStrings.js" charset="utf-8"></script>
+    <script type="text/javascript" src="attributes.js" charset="utf-8"></script>
+    <script type="text/javascript" src="Grabber.js" charset="utf-8"></script>
+    <script type="text/javascript" src="main.js" charset="utf-8"></script>
+</head>
+<body onload="load();" id="body" apple-part="com.apple.Dashcode.part.StackLayout">
+    <div id="front">
+        <div id="grabber">
+            <div apple-part="com.apple.Dashcode.part.roundedrectangleshape" class="apple-no-children" apple-style="image-theme: 1; image-shape: 3; image-button-type: 3; image-opacity: 0.12; image-top-color: 0.0000,0.0000,0.0000; image-bottom-color: 0.9412,0.9412,0.9412; image-radius: 14,14,14,14; image-border-color: 0.6700,0.6700,0.6700; glass-arc-height: 0.00; shadow-include-shadow: 0; shadow-blur: 3.00;" id="grabberStand" apple-group="roundedRectangleShape" apple-default-image-visibility="hidden"></div>
+            <div apple-part="com.apple.Dashcode.part.roundedrectangleshape" class="apple-no-children" apple-style="image-theme: 0; image-shape: 3; image-button-type: 3; image-opacity: 0.45; image-top-color: 0.8552,0.8552,0.8552; image-bottom-color: 0.6700,0.6700,0.6700; image-radius: 14,14,14,14; image-border-color: 0.6700,0.6700,0.6700; shine-height: 0.50; shadow-include-shadow: 0; shadow-blur: 3.00;" id="grabberBase" apple-group="roundedRectangleShape2" apple-default-image-visibility="hidden"></div>
+        </div>
+        <embed apple-part="com.apple.Dashcode.part.quartzcomposer" id="composition" name="composition" type="application/x-quartzcomposer" src="Default.qtz" opaque="false" above="true"></embed>
+        <div class="apple-no-children" id="info" apple-part="com.apple.Dashcode.part.infobutton" apple-default-image-visibility="hidden"></div>
+    </div>
+    <div id="back">
+       <img id="backImg" src="Parts/Images/back.png" alt="" apple-locked="true" apple-part="com.apple.Dashcode.part.backimage" apple-style=" image-radius: 12,12,12,12; image-border: 1; image-border-color: 0.1500,0.1500,0.1500; image-border-width: 3; shadow-include-shadow: 1; shadow-blur: 9.00; shadow-offset: -1.00,-6.00; shadow-color: 0.0000,0.0000,0.0000,0.3333;">
+        <img id="backDevelopedWith" src="Images/DevelopedWith.png" alt="Created with Dashcode">
+        <div id="done" class="apple-no-children" apple-part="com.apple.Dashcode.part.glassbutton"></div>
+    </div>
+</body>
+</html>

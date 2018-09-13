@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="main.css">
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleAnimator.js" charset="utf-8"></script>
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleButton.js" charset="utf-8"></script>
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleInfoButton.js" charset="utf-8"></script>
+    <script type="text/javascript" src="Parts/parts.js" charset="utf-8"></script>    
+    <script type="text/javascript" src="localizedStrings.js" charset="utf-8"></script>
+    <script type="text/javascript" src="attributes.js" charset="utf-8"></script>
+    <script type="text/javascript" src="iCal.js" charset="utf-8"></script>
+    <script type="text/javascript" src="main.js" charset="utf-8"></script>
+</head>
+<body onload="load();" apple-part="com.apple.Dashcode.part.StackLayout">
+    <div id="front">
+        <img id="frontImg" src="Parts/Images/front.png" alt="" apple-locked="true" apple-part="com.apple.Dashcode.part.frontimage" apple-style="image-theme: 0; image-shape: 3; image-opacity: 1.00; image-top-color: 0.217929348,0.286289781,0.776653707,1; image-bottom-color: 1,1,1,1; image-radius: 12,12,12,12; image-border: 1; image-border-color: 0.160601199,0.210940719,0.572075963,1; image-border-width: 2; shine-on: 1; shine-include-shine: 1; shine-strength: 0.30; shine-alpha-level: 0.75; shine-height: 0.62; glass-arc-height: 0.00; shine-include-bottom: 1; shine-over-border: 0; shadow-include-shadow: 1; shadow-blur: 9.00; shadow-offset: -1.00,-6.00; shadow-color: 0,0,0,0.3333;">
+        <div id="timer">
+            <div apple-part="com.apple.Dashcode.part.roundedrectangleshape" class="apple-no-children" apple-style="image-theme: 0; image-shape: 3; image-button-type: 3; image-opacity: 1.00; image-top-color: 0.0348000005,0.0381999984,0.0860000029,1; image-bottom-color: 1,1,1,1; image-radius: 7,7,7,7; image-border: 1; image-border-color: 0,0,0,0.6; image-border-width: 1; shine-on: 1; shine-include-shine: 1; shine-strength: 0.30; shine-alpha-level: 0.00; shine-height: 0.50; glass-arc-height: 0.00; shine-include-bottom: 1; shine-over-border: 0; shadow-include-shadow: 0;" id="timer-bg" apple-group="roundedRectangleShape"></div>
+            <div id="countdown-time">
+                <div id="remaining-days" apple-default-image-visibility="hidden">0</div>
+                <div id="remaining-hours" apple-default-image-visibility="hidden">00</div>
+                <div id="remaining-minutes" apple-default-image-visibility="hidden">00</div>
+                <div id="remaining-seconds" apple-default-image-visibility="hidden">00</div>
+                <div id="timer-colons">
+                    <div id="colon1" apple-default-image-visibility="hidden">:</div>
+                    <div id="colon2" apple-default-image-visibility="hidden">:</div>
+                    <div id="colon3" apple-default-image-visibility="hidden">:</div>
+                </div>
+            </div>
+    
+            <div id="countdown-label">
+                <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" id="label-days" apple-group="text" apple-default-image-visibility="hidden"></div>
+                <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" id="label-hours" apple-group="text" apple-default-image-visibility="hidden"></div>
+                <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" id="label-minutes" apple-group="text" apple-default-image-visibility="hidden"></div>
+                <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" id="label-seconds" apple-group="text" apple-default-image-visibility="hidden"></div>
+            </div>
+        </div>
+        
+        <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" id="event-label" apple-group="text"></div>
+
+        <div class="apple-no-children" id="info" apple-part="com.apple.Dashcode.part.infobutton" apple-default-image-visibility="hidden"></div>
+        
+    </div>
+    <div id="back">
+       <img id="backImg" src="Parts/Images/back.png" alt="" apple-locked="true" apple-part="com.apple.Dashcode.part.backimage" apple-style=" image-radius: 12,12,12,12; image-border: 1; image-border-color: 0.1500,0.1500,0.1500; image-border-width: 3; shadow-include-shadow: 1; shadow-blur: 9.00; shadow-offset: -1.00,-6.00; shadow-color: 0.0000,0.0000,0.0000,0.3333;">
+        <img id="backDevelopedWith" src="Images/DevelopedWith.png" alt="Created with Dashcode">
+        <div id="done" class="apple-no-children" apple-part="com.apple.Dashcode.part.glassbutton"></div>
+    </div>
+</body>
+</html>

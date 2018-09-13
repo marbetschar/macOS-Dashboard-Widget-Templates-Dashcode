@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="main.css">
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleAnimator.js" charset="utf-8"></script>
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleButton.js" charset="utf-8"></script>
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleInfoButton.js" charset="utf-8"></script>
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleScrollbar.js" charset="utf-8"></script>
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleScrollArea.js" charset="utf-8"></script>
+    <script type="text/javascript" src="Parts/parts.js" charset="utf-8"></script>    
+    <script type="text/javascript" src="localizedStrings.js" charset="utf-8"></script>
+    <script type="text/javascript" src="attributes.js" charset="utf-8"></script>
+    <script type="text/javascript" src="main.js" charset="utf-8"></script>
+</head>
+<body onload="load();" apple-part="com.apple.Dashcode.part.StackLayout">
+    <div id="front">
+        <img id="frontImg" src="Parts/Images/front.png" alt="" apple-locked="true" apple-part="com.apple.Dashcode.part.frontimage" apple-style="image-theme: 0; image-shape: 3; image-opacity: 1.00; image-top-color: 0.9100,0.9400,1.0000; image-bottom-color: 0.2265,1.0000,0.6839; image-radius: 12,12,12,12; image-border: 1; image-border-color: 0.4200,0.4300,0.4000; image-border-width: 1; shine-on: 0; shine-strength: 0.15; shine-alpha-level: 0.17; shine-height: 0.94; glass-arc-height: 0.00; shadow-include-shadow: 1; shadow-blur: 9.00; shadow-offset: -1.00,-6.00; shadow-color: 0.0000,0.0000,0.0000,0.3333;">
+        <div id="map" apple-part="com.apple.Dashcode.part.mapfeed"></div>
+        <div apple-part="com.apple.Dashcode.part.toprectangleshape" class="apple-no-children" apple-style="image-theme: 1; image-shape: 9; image-button-type: 3; image-opacity: 1.00; image-top-color: 0.7275,0.7603,0.8105; image-bottom-color: 0.4146,0.4905,0.6216; image-radius: 12,12,-1,-1; image-border: 1; image-border-color: 0.4221,0.4358,0.4188; image-border-width: 1; shine-on: 0; shine-strength: 0.15; shine-alpha-level: 0.17; shine-height: 0.50; glass-arc-height: 0.00; shadow-include-shadow: 0; shadow-blur: 3.00;" id="topRectangle" apple-group="topRectangleShape"></div>
+        <div apple-part="com.apple.Dashcode.part.bottomrectangleshape" class="apple-no-children" apple-style="image-theme: 1; image-shape: 10; image-button-type: 3; image-opacity: 1.00; image-top-color: 0.7275,0.7603,0.8105; image-bottom-color: 0.4146,0.4905,0.6216; image-radius: -1,-1,12,12; image-border: 1; image-border-color: 0.4200,0.4300,0.4000; image-border-width: 1; shine-on: 0; shine-strength: 0.15; shine-alpha-level: 0.17; shine-height: 0.50; glass-arc-height: 0.00; shadow-include-shadow: 0; shadow-blur: 3.00;" id="bottomRectangle" apple-group="bottomRectangleShape"></div>
+        <div class="apple-no-children" id="info" apple-part="com.apple.Dashcode.part.infobutton" apple-default-image-visibility="hidden"></div>
+        <div apple-part="com.apple.Dashcode.part.roundedleftbutton" class="apple-no-children" apple-style="image-theme: 1; image-shape: 5; image-button-type: 0; image-opacity: 1.00; image-top-color: 0.7275,0.7603,0.8105; image-bottom-color: 0.4146,0.4905,0.6216; image-radius: 5,-1,5,-1; image-border: 1; image-border-color: 0.3477,0.4029,0.4344; image-border-width: 1; shine-on: 0; shine-strength: 0.15; shine-alpha-level: 0.17; shine-height: 0.50; glass-arc-height: 0.00; shadow-include-shadow: 0; shadow-blur: 3.00;" id="zoomOutButton" apple-group="button2" apple-default-image-visibility="hidden"></div>
+        <img src="Images/zoomOut.png" id="zoomOutImg" onclick="zoomOut(event)" apple-default-image-visibility="hidden">
+        <div apple-part="com.apple.Dashcode.part.roundedrightbutton" class="apple-no-children" apple-style="image-theme: 1; image-shape: 6; image-button-type: 0; image-opacity: 1.00; image-top-color: 0.7275,0.7603,0.8105; image-bottom-color: 0.4146,0.4905,0.6216; image-radius: -1,5,-1,5; image-border: 1; image-border-color: 0.3477,0.4029,0.4344; image-border-width: 1; shine-on: 0; shine-strength: 0.15; shine-alpha-level: 0.17; shine-height: 0.50; glass-arc-height: 0.00; shadow-include-shadow: 0; shadow-blur: 3.00;" id="zoomInButton" apple-group="button" apple-default-image-visibility="hidden"></div>
+        <img src="Images/zoomIn.png" id="zoomInImg" onclick="zoomIn(event)" apple-default-image-visibility="hidden">
+        <div apple-part="com.apple.Dashcode.part.roundedleftbutton" class="apple-no-children" apple-style="image-theme: 1; image-shape: 5; image-button-type: 0; image-opacity: 1.00; image-top-color: 0.7275,0.7603,0.8105; image-bottom-color: 0.4146,0.4905,0.6216; image-radius: 5,-1,5,-1; image-border: 1; image-border-color: 0.3477,0.4029,0.4344; image-border-width: 1; shine-on: 0; shine-strength: 0.15; shine-alpha-level: 0.17; shine-height: 0.50; glass-arc-height: 0.00; shadow-include-shadow: 0; shadow-blur: 3.00;" id="mapButton" apple-group="button2" apple-default-image-visibility="hidden"></div>
+        <div apple-part="com.apple.Dashcode.part.roundedtextbutton" class="apple-no-children" apple-style="image-theme: 1; image-shape: 3; image-button-type: 0; image-opacity: 1.00; image-top-color: 0.7275,0.7603,0.8105; image-bottom-color: 0.4146,0.4905,0.6216; image-radius: 0,0,0,0; image-border: 1; image-border-color: 0.3477,0.4029,0.4344; image-border-width: 1; shine-on: 0; shine-strength: 0.15; shine-alpha-level: 0.17; shine-height: 0.50; glass-arc-height: 0.00; shadow-include-shadow: 0; shadow-blur: 3.00;" id="satelliteButton" apple-group="button3" apple-default-image-visibility="hidden"></div>
+        <div apple-part="com.apple.Dashcode.part.roundedrightbutton" class="apple-no-children" apple-style="image-theme: 1; image-shape: 6; image-button-type: 0; image-opacity: 1.00; image-top-color: 0.7275,0.7603,0.8105; image-bottom-color: 0.4146,0.4905,0.6216; image-radius: -1,5,-1,5; image-border: 1; image-border-color: 0.3477,0.4029,0.4344; image-border-width: 1; shine-on: 0; shine-strength: 0.15; shine-alpha-level: 0.17; shine-height: 0.50; glass-arc-height: 0.00; shadow-include-shadow: 0; shadow-blur: 3.00;" id="hybridButton" apple-group="button" apple-default-image-visibility="hidden"></div>
+        <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" id="title" apple-group="title" apple-text-overflow="ellipsis" apple-default-image-visibility="hidden"></div>
+        <div id="infoWindow" apple-default-image-visibility="hidden">
+            <div id="infoTopLeft" apple-default-image-visibility="hidden"></div>
+            <div id="infoTop1" apple-default-image-visibility="hidden"></div>
+            <div id="infoTop2" apple-default-image-visibility="hidden"></div>
+            <div id="infoLeft" apple-default-image-visibility="hidden"></div>
+            <div id="infoTopRight" apple-default-image-visibility="hidden"></div>
+            <div id="infoRight" apple-default-image-visibility="hidden"></div>
+            <div id="infoBottomLeft" apple-default-image-visibility="hidden"></div>
+            <div id="infoBottomRight" apple-default-image-visibility="hidden"></div>
+            <div id="infoBottom1" apple-default-image-visibility="hidden"></div>
+            <div id="infoBottom2" apple-default-image-visibility="hidden"></div>
+            <div id="infoTail" apple-default-image-visibility="hidden"></div>
+            <div id="infoMiddle" apple-default-image-visibility="hidden"></div>
+            <div id="infoContentsParent" apple-default-image-visibility="hidden"></div>
+            <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis" id="readMore" apple-group="text" onclick="showFullScreen(event)"></div>
+            <div apple-part="com.apple.Dashcode.part.toprectangleshape" class="apple-no-children" apple-style="image-theme: 0; image-shape: 9; image-button-type: 3; image-opacity: 1.00; image-top-color: 0.950011432,0.950011432,0.950011432,1; image-bottom-color: 0.930400014,1,0.972000003,1; image-radius: 12,12,-1,-1; image-border: 0; image-border-color: 0.529399991,0.529399991,0.529399991,1; image-border-width: 1; shine-on: 1; shine-strength: 0.28; shine-alpha-level: 0.14; shine-height: 0.50; glass-arc-height: 0.00; shadow-include-shadow: 0;" id="infoTitleBg" apple-group="topRectangleShape" apple-default-image-visibility="hidden"></div>
+            <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis" id="infoTitle" apple-group="text" apple-locked="false"></div>
+            <img src="Images/closebox.png" id="closeBox" apple-default-image-visibility="hidden" onclick="closeInfoWindow(event)">
+        </div>
+        <div id="fullInfoWindow" apple-default-image-visibility="hidden">
+            <div apple-part="com.apple.Dashcode.part.rectangleshape" class="apple-no-children" apple-style="image-theme: 0; image-shape: 3; image-button-type: 3; image-opacity: 1.00; image-top-color: 0.950011432,0.950011432,0.950011432,1; image-bottom-color: 0.226500005,1,0.683899999,1; image-radius: 0,0,0,0; image-border: 0; image-border-color: 0.419999987,0.430000007,0.400000006,1; image-border-width: 1; shine-on: 1; shine-strength: 0.28; shine-alpha-level: 0.14; shine-height: 0.50; glass-arc-height: 0.00; shadow-include-shadow: 0;" id="fullInfoTitleBg" apple-group="rectangleShape" apple-default-image-visibility="hidden"></div>
+            <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis" id="fullInfoTitle" apple-group="text" apple-locked="false"></div>
+            <img src="Images/closebox.png" id="fullCloseBox" apple-default-image-visibility="hidden" onclick="closeFullScreen(event)">
+            <div id="fullContentsNoScroll"></div>
+            <div apple-part="com.apple.Dashcode.part.scrollarea" id="fullContentsScroll" apple-group="scrollArea" apple-default-image-visibility="hidden">
+                <div id="fullContents" apple-group="scrollArea" style="position: absolute; left: 0px; top: 0px; right: 22px; bottom: 0px; overflow-x: hidden; overflow-y: hidden; " apple-default-image-visibility="hidden"></div>
+            </div>
+        </div>
+        <div id="messages" apple-default-image-visibility="hidden">
+            <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis" id="messagesLabel" apple-group="messages"></div>
+            <div apple-part="com.apple.Dashcode.part.roundedtextbutton" class="apple-no-children" apple-style="image-theme: 0; image-shape: 3; image-button-type: 0; image-opacity: 1.00; image-top-color: 0.143099993,0.148200005,0.158399999,1; image-bottom-color: 0.056400001,0.248899996,0.170200005,1; image-radius: 5,5,5,5; image-border: 1; image-border-color: 0.419999987,0.430000007,0.400000006,1; image-border-width: 1; shine-on: 1; shine-strength: 0.15; shine-alpha-level: 0.17; shine-height: 0.50; glass-arc-height: 0.00; shadow-include-shadow: 0;" id="getKeyButton" apple-group="button" apple-default-image-visibility="hidden"></div>
+        </div>
+        <div id="loading" apple-default-image-visibility="hidden">
+            <div apple-part="com.apple.Dashcode.part.roundedrectangleshape" class="apple-no-children" apple-style="image-theme: 1; image-shape: 3; image-button-type: 3; image-opacity: 0.70; image-top-color: 0.199100003,0.199100003,0.199100003,1; image-bottom-color: 0,0,0,1; image-radius: 5,5,5,5; image-border: 0; image-border-color: 0.615400016,0.615400016,0.615400016,1; image-border-width: 1; shine-on: 1; shine-strength: 0.20; shine-alpha-level: 0.20; shine-height: 0.50; glass-arc-height: 0.00; shadow-include-shadow: 0;" id="loadingBackground" apple-group="roundedRectangleShape" apple-default-image-visibility="hidden"></div>
+            <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-text-overflow="ellipsis" id="loadingLabel" apple-group="loadingLabel" apple-default-image-visibility="hidden"></div>
+        </div>
+    </div>
+    <div id="back">
+        <img id="backImg" src="Parts/Images/back.png" alt="" apple-locked="true" apple-part="com.apple.Dashcode.part.backimage" apple-style=" image-radius: 12,12,12,12; image-border: 1; image-border-color: 0.1500,0.1500,0.1500; image-border-width: 3; shadow-include-shadow: 1; shadow-blur: 9.00; shadow-offset: -1.00,-6.00; shadow-color: 0.0000,0.0000,0.0000,0.3333;">
+        <img id="backDevelopedWith" src="Images/DevelopedWith.png" alt="Created with Dashcode">
+        <div id="done" class="apple-no-children" apple-part="com.apple.Dashcode.part.glassbutton"></div>
+        <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis" id="filtersLabel" apple-group="text"></div>
+        <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis" id="titleLabel" apple-group="text1"></div>
+        <input type="text" name="title" value="" class="apple-textfield apple-no-children" apple-part="com.apple.Dashcode.part.textfield" id="titleFilter" apple-group="textfield" onkeyup="setFilterContains(event)">
+        <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis" id="descriptionLabel" apple-group="text1"></div>
+        <input type="text" name="description" value="" class="apple-textfield apple-no-children" apple-part="com.apple.Dashcode.part.textfield" id="descriptionFilter" apple-group="textfield" onkeyup="setFilterContains(event)">
+    </div>
+
+</body>
+</html>

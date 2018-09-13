@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="main.css" />
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleAnimator.js" charset="utf-8"></script>
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleButton.js" charset="utf-8"></script>
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleInfoButton.js" charset="utf-8"></script>
+    <script type="text/javascript" src="Parts/parts.js" charset="utf-8"></script>    
+    <script type="text/javascript" src="attributes.js" charset="utf-8"></script>
+    <script type="text/javascript" src="localizedStrings.js" charset="utf-8"></script>
+    <script type="text/javascript" src="Slideshow.js" charset="utf-8"></script>
+    <script type="text/javascript" src="Controls.js" charset="utf-8"></script>
+    <script type="text/javascript" src="main.js" charset="utf-8"></script>
+</head>
+<body onload="load();" apple-default-image-visibility="visible" apple-part="com.apple.Dashcode.part.StackLayout">
+    <div id="front">
+    <img src="Parts/Images/front.png" alt="" apple-locked="true" apple-part="com.apple.Dashcode.part.frontimage" apple-style="image-theme: 1; image-shape: 3; image-opacity: 1.00; image-top-color: 0.9774,0.9774,0.9774; image-bottom-color: 0.9105,0.9141,0.9280; image-radius: 0,0,0,0; image-border: 1; image-border-color: 0.7000,0.7000,0.7000; image-border-width: 1; shine-on: 0; shine-strength: 0.00; shine-alpha-level: 0.00; shine-height: 0.00; glass-arc-height: 0.00; shadow-include-shadow: 1; shadow-blur: 9.00; shadow-offset: -1.00,-6.00; shadow-color: 0.0000,0.0000,0.0000,0.3333;" id="frontImg" apple-group="frontImg">
+    <div id="photobox" apple-part="com.apple.Dashcode.part.photocastfeed">
+        <div apple-part="com.apple.Dashcode.part.text" class="overlay apple-text apple-no-children" apple-default-image-visibility="hidden" id="caption" apple-group="text">Caption</div>
+        <div id="controls" class="overlay"></div>
+        <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" id="loading" apple-group="text">Loading</div>
+    </div>
+    <div apple-part="com.apple.Dashcode.part.infobutton" class="overlay apple-no-children" id="info" apple-group="infobutton" apple-default-image-visibility="hidden"></div>
+    <img src="Images/PhotoCorner-UL.png" id="cornerUL">
+    <img src="Images/PhotoCorner-UR.png" id="cornerUR">
+    <img src="Images/PhotoCorner-LL.png" id="cornerLL">
+    <img src="Images/PhotoCorner-LR.png" id="cornerLR">
+    </div>
+    <div id="back">
+       <img id="backImg" src="Parts/Images/back.png" alt="" apple-locked="true" apple-part="com.apple.Dashcode.part.backimage" apple-style=" image-radius: 0,0,0,0; image-border: 1; image-border-color: 0.1500,0.1500,0.1500; image-border-width: 3; shadow-include-shadow: 1; shadow-blur: 9.00; shadow-offset: -1.00,-6.00; shadow-color: 0.0000,0.0000,0.0000,0.3333;">
+        <img id="backDevelopedWith" src="Images/DevelopedWith.png" alt="Created with Dashcode">
+        <div id="done" class="apple-no-children" apple-part="com.apple.Dashcode.part.glassbutton"></div>
+    <select apple-part="com.apple.Dashcode.part.backpopupbutton" id="direction-list" apple-group="popup" onchange="setSelectedDirection();">
+    </select>
+    <select apple-part="com.apple.Dashcode.part.backpopupbutton" id="transition-list" apple-group="popup" onchange="setSelectedTransition();">
+    </select>
+    <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" id="label-change" apple-group="text">Change picture:</div>
+    <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" id="label-transition" apple-group="text">Transition:</div>
+    <div apple-part="com.apple.Dashcode.part.glassbutton" class="apple-no-children" id="subscribe-button" apple-group="glassbutton">
+    </div>
+    <select apple-part="com.apple.Dashcode.part.backpopupbutton" id="display-time" apple-group="popup" onchange="setSelectedDisplayTime();">
+    </select>
+    </div>
+</body>
+</html>
